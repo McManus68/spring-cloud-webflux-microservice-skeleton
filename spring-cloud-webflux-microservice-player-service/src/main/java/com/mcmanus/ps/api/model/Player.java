@@ -10,16 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PAYMENT_TB")
+@Table(name = "PLAYER")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment {
+public class Player {
 
     @Id @GeneratedValue
     private int id;
-    private String status;
-    private String transactionId;
-    private int orderId;
-    private double amount;
+    private String firstname;
+    private String name;
+    private int level;
+    private String mail;
+
 }
