@@ -5,6 +5,8 @@ import com.mcmanus.ps.api.persistence.PlayerRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.Random;
@@ -17,19 +19,19 @@ public class PlayerService {
     @Autowired
     private PlayerRepository repository;
 
-    public Player save(Player player) {
+    public Mono<Player> save(Player player) {
         return repository.save(player);
     }
 
-    public Player update(Player player) {
+    public Mono<Player> update(Player player) {
         return repository.save(player);
     }
 
-    public Player get(int id) {
-        return repository.findById(id).orElse(null);
+    public Mono<Player> get(int id) {
+        return repository.findById(id);
     }
 
-    public List<Player> getAll() {
+    public Flux<Player> getAll() {
         return repository.findAll();
     }
 

@@ -4,6 +4,8 @@ import com.mcmanus.ps.api.model.Player;
 import com.mcmanus.ps.api.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 
@@ -15,22 +17,22 @@ public class PlayerController {
     private PlayerService service;
 
     @PostMapping
-    public Player save(@RequestBody Player player) {
+    public Mono<Player> save(@RequestBody Player player) {
         return service.save(player);
     }
 
     @PutMapping
-    public Player update(@RequestBody Player player) {
+    public Mono<Player> update(@RequestBody Player player) {
         return service.save(player);
     }
 
     @GetMapping("/{id}")
-    public Player get(@PathVariable int id) {
+    public Mono<Player> get(@PathVariable int id) {
         return service.get(id);
     }
 
     @GetMapping
-    public List<Player> getAll() {
+    public Flux<Player> getAll() {
         return service.getAll();
     }
 

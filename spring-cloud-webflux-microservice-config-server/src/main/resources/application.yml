@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/McManus68/cloud-config-server
+          uri: https://github.com/McManus68/spring-cloud-webflux-microservice-skeleton-config
           default-label: main
 
 
