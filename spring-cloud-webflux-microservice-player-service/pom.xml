@@ -17,9 +17,12 @@
 	<properties>
 		<java.version>15</java.version>
 		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+		<springfox.version>3.0.0</springfox.version>
 	</properties>
 
 	<dependencies>
+		<!-- ************* SPRING BOOT ************* -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
@@ -29,6 +32,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-r2dbc</artifactId>
 		</dependency>
+
+		<!-- ************* SPRING CLOUD ************* -->
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -40,6 +45,7 @@
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
+		<!-- ************* DATABASE ************* -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -57,6 +63,16 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- ************* SWAGGER ************* -->
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>${springfox.version}</version>
+		</dependency>
+
+		<!-- ************* TESTS ************* -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
