@@ -32,3 +32,18 @@ hystrix:
           thread:
             timeoutInMilliseconds: 5000
 
+okta:
+  oauth2:
+    issuer: https://dev-2594667.okta.com/oauth2/default
+    client-id: 0oajaf0xOE2DpPU1D5d5
+    client-secret: XaOB4P-cZ4pSVz4DuyteUI3DFu5zqyjrexpW6HOs
+  client:
+    orgUrl: https://dev-2594667.okta.com
+    token: 00TVXDNx1e2FgvxP4jLlONbPMzrBDLwESSf9hZSvMI123
+
+logging:
+  level:
+    root: info
+
+security:
+  enable: false
