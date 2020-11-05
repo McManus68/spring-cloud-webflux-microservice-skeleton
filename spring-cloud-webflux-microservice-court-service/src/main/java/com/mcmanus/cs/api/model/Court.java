@@ -1,4 +1,4 @@
-package com.mcmanus.ps.api.model;
+package com.mcmanus.cs.api.model;
 
 import lombok.Builder;
 import lombok.Data;
@@ -8,11 +8,13 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table
 @Data
 @Builder
-public class Player {
+public class Court {
 
     @Id
     private Integer id;
     private String name;
-    private String mail;
-    private Integer level;
+    private String city;
+    private Double latitude;
+    private Double longitude;
+
 }

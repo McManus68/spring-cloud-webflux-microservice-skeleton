@@ -19,7 +19,8 @@
         <module>spring-cloud-webflux-microservice-discovery-service</module>
         <module>spring-cloud-webflux-microservice-config-server</module>
         <module>spring-cloud-webflux-microservice-gateway</module>
-        <module>spring-cloud-webflux-microservice-player-service</module>
+        <module>spring-cloud-webflux-microservice-court-service</module>
+        <module>spring-cloud-webflux-microservice-court-service</module>
     </modules>
 
     <properties>

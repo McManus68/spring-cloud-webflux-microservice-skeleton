@@ -1,10 +1,10 @@
-package com.mcmanus.ps.api;
+package com.mcmanus.cs.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PlayerServiceApplicationTests {
+class CourtServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

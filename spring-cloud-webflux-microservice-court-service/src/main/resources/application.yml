@@ -1,0 +1,14 @@
+server:
+  port: 9192
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+  application:
+    name: COURT-SERVICE
+
+logging:
+  file:
+    name: /Users/Mc/Documents/logs/log

@@ -32,9 +32,9 @@ public class PlayerServiceApplication {
 			client.execute("DELETE FROM PLAYER;").fetch().first().subscribe();
 
 			Stream<Player> stream = Stream.of(
-					new Player(null, "Manu", "manu@aol.fr", 3),
-					new Player(null, "Robert", "robert@aol.fr", 8),
-					new Player(null, "Jean", "jean@aol.fr", 4));
+					Player.builder().name("Manu").mail("manu@aol.fr").level(3).build(),
+					Player.builder().name("Robert").mail("robert@aol.fr").level(8).build(),
+					Player.builder().name("Jean").mail("jean@aol.fr").level(4).build());
 
 			// initialize the database
 			repository.saveAll(Flux.fromStream(stream))

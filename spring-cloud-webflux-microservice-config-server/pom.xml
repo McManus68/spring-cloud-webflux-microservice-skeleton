@@ -20,6 +20,9 @@
 	</properties>
 
 	<dependencies>
+
+		<!-- ************* SPRING CLOUD ************* -->
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
@@ -28,6 +31,8 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+
+		<!-- ************* TESTS ************* -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mcmanus</groupId>
-	<artifactId>spring-cloud-webflux-microservice-player-service</artifactId>
+	<artifactId>spring-cloud-webflux-microservice-court-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-cloud-webflux-microservice-player-service</name>
+	<name>spring-cloud-webflux-microservice-court-service</name>
 	<description>Spring Cloud Webflux MicroService - Player Service</description>
 
 	<properties>

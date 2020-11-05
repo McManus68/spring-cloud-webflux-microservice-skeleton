@@ -17,6 +17,10 @@ spring:
               args:
                 name: player-service
                 fallbackuri: forward:/playerFallBack
+        - id: court-service
+          uri: lb://COURT-SERVICE
+          predicates:
+            - Path=/courts/**
 
 management:
   endpoints:

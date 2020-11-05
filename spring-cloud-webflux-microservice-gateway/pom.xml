@@ -21,6 +21,9 @@
 	</properties>
 
 	<dependencies>
+
+		<!-- ************* SPRING BOOT ************* -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -37,6 +40,8 @@
 			<artifactId>okta-spring-sdk</artifactId>
 			<version>${okta.version}</version>
 		</dependency>
+
+		<!-- ************* SPRING CLOUD ************* -->
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -62,6 +67,8 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
+
+		<!-- ************* TESTS ************* -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
