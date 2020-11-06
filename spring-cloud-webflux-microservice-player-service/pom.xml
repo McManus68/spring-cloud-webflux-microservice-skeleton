@@ -18,6 +18,7 @@
 		<java.version>15</java.version>
 		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
 		<springfox.version>3.0.0</springfox.version>
+		<mockito.version>3.6.0</mockito.version>
 	</properties>
 
 	<dependencies>
@@ -91,6 +92,15 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<dependencyManagement>
