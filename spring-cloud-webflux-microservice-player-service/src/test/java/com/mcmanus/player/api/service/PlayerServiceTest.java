@@ -74,10 +74,9 @@ public class PlayerServiceTest {
         Mono<PlayerResponse> response = service.get(5);
 
         StepVerifier.create(response)
-                .expectNextMatches(r -> {
+                .assertNext(r -> {
                     Assertions.assertEquals(r.getPlayer().getId(), 5);
                     Assertions.assertEquals(r.getFavoriteCourt().getId(), 4);
-                    return true;
                 })
                 .verifyComplete();
 
