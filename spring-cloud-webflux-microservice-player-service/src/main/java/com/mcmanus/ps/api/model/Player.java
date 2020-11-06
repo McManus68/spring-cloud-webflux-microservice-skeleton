@@ -15,4 +15,5 @@ public class Player {
     private String name;
     private String mail;
     private Integer level;
+    private Integer favoriteCourt;
 }

@@ -1,5 +1,6 @@
 package com.mcmanus.ps.api.controller;
 
+import com.mcmanus.ps.api.common.PlayerResponse;
 import com.mcmanus.ps.api.model.Player;
 import com.mcmanus.ps.api.service.PlayerService;
 import io.swagger.annotations.Api;
@@ -31,7 +32,7 @@ public class PlayerController {
 
     @GetMapping("/{id}")
     @ApiOperation("Retrieve the player with the specified identifier")
-    public Mono<Player> get(@PathVariable int id) {
+    public Mono<PlayerResponse> get(@PathVariable int id) {
         return service.get(id);
     }
 
