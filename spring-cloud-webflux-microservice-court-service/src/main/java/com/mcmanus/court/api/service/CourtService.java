@@ -1,37 +1,20 @@
 package com.mcmanus.court.api.service;
 
-import com.mcmanus.court.api.persistence.CourtRepository;
 import com.mcmanus.court.api.model.Court;
-import lombok.extern.slf4j.Slf4j;
+import com.mcmanus.court.api.persistence.CourtRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Service
-@Slf4j
-public class CourtService {
+public interface CourtService {
 
-    @Autowired
-    private CourtRepository repository;
+    Mono<Court> save(Court court);
 
-    public Mono<Court> save(Court court) {
-        return repository.save(court);
-    }
+    Mono<Court> update(Court court);
 
-    public Mono<Court> update(Court court) {
-        return repository.save(court);
-    }
+    Mono<Court> get(int id);
 
-    public Mono<Court> get(int id) {
-        return repository.findById(id);
-    }
+    Flux<Court> getAll();
 
-    public Flux<Court> getAll() {
-        return repository.findAll();
-    }
-
-    public void delete(int id) {
-        repository.deleteById(id);
-    }
+    void delete(int id);
 }

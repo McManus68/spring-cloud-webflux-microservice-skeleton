@@ -1,0 +1,18 @@
+server:
+  port: 9191
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+  application:
+    name: PLAYER-SERVICE
+
+logging:
+  file:
+    name: /Users/Mc/Documents/logs/log
+
+microservice:
+      court-service:
+        uri: fake

@@ -4,6 +4,7 @@ import com.mcmanus.player.api.common.Court;
 import com.mcmanus.player.api.common.PlayerResponse;
 import com.mcmanus.player.api.model.Player;
 import com.mcmanus.player.api.persistence.PlayerRepository;
+import com.mcmanus.player.api.service.impl.PlayerServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,13 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.client.RestTemplate;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
@@ -44,7 +43,7 @@ public class PlayerServiceTest {
 
         @Bean
         public PlayerService playerService() {
-            return new PlayerService();
+            return new PlayerServiceImpl();
         }
     }
 
